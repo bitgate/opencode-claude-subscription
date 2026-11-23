@@ -1,0 +1,42 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "plan2api": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Plan2API",
+      "options": {
+        "baseURL": "https://api.plan2api.com/v1",
+        "apiKey": "{env:PLAN2API_API_KEY}"
+      },
+      "models": {
+        "claude/claude-sonnet-5": {
+          "name": "Claude Sonnet 5",
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude/claude-opus-5-5": {
+          "name": "Claude Opus 5.5",
+          "limit": { "context": 1000000, "output": 128000 }
+        },
+        "claude/claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5",
+          "limit": { "context": 200000, "output": 64000 }
+        },
+        "openai/gpt-6.1-sol": {
+          "name": "GPT-6.1 Sol",
+          "limit": { "context": 500000, "output": 128000 }
+        },
+        "gemini/gemini-4-argon-high": {
+          "name": "Gemini 4 Argon"
+        },
+        "gemini/gemini-3.8-flash-high": {
+          "name": "Gemini 3.8 Flash"
+        },
+        "kimi/k3": {
+          "name": "Kimi K3"
+        }
+      }
+    }
+  },
+  "model": "plan2api/claude/claude-sonnet-5",
+  "small_model": "plan2api/claude/claude-haiku-4-5"
+}
