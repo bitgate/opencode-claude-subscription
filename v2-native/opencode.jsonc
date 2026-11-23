@@ -1,0 +1,48 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "plan2api/claude-sonnet-5",
+  "providers": {
+    "plan2api": {
+      "name": "Plan2API",
+      "env": ["PLAN2API_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.plan2api.com/v1",
+      },
+      "models": {
+        "claude-sonnet-5": {
+          "modelID": "claude/claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "limit": { "context": 1000000, "output": 128000 },
+        },
+        "claude-opus-5-5": {
+          "modelID": "claude/claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "limit": { "context": 1000000, "output": 128000 },
+        },
+        "claude-haiku-4-5": {
+          "modelID": "claude/claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "limit": { "context": 200000, "output": 64000 },
+        },
+        "gpt-6.1-sol": {
+          "modelID": "openai/gpt-6.1-sol",
+          "name": "GPT-6.1 Sol",
+          "limit": { "context": 500000, "output": 128000 },
+        },
+        "gemini-4-argon-high": {
+          "modelID": "gemini/gemini-4-argon-high",
+          "name": "Gemini 4 Argon",
+        },
+        "gemini-3.8-flash-high": {
+          "modelID": "gemini/gemini-3.8-flash-high",
+          "name": "Gemini 3.8 Flash",
+        },
+        "kimi-k3": {
+          "modelID": "kimi/k3",
+          "name": "Kimi K3",
+        },
+      },
+    },
+  },
+}
